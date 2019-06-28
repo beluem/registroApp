@@ -1,0 +1,45 @@
+<fieldset>
+{{#if user}}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/registros/add" method="POST">
+                            <label for="medio">Medio</label>
+                                <select name="medio" id="medio">
+                                    <option value="Correo">Correo</option>
+                                    <option value="Llamada">Llamada</option>
+                                </select>
+                                <br>
+                            <label for="sistema">Sistema</label>
+                            <select name="sistema" id="sistema">
+                                <option value="sistema 1">Sistema1</option>
+                                <option value="sistema 2">Sistema2</option>
+                            </select>
+                            <br>
+                            <label for="origen_inconveniente">Origen</label>
+                            <select name="origen_inconveniente" id="origen_inconveniente">
+                                <option value="Error de sistema">Error de Sistema</option>
+                                <option value="Error de usuario">Error de Usuario</option>
+                                <option value="Error de conexion">Error de Conexión</option>
+                            </select>                        
+                            <div class="form-group">
+                                <textarea name="motivo" cols="30" rows="6" class="form-control" placeholder="Motivo"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="solucion"  cols="30" rows="6" class="form-control" placeholder="Solución"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block">
+                                    Guardar
+                                </button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+{{/if}}
+ </fieldset>
